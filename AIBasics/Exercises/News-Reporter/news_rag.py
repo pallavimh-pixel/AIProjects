@@ -1,0 +1,97 @@
+from uuid import uuid4
+from dotenv import load_dotenv
+from pathlib import Path
+from langchain_classic.chains import RetrievalQAWithSourcesChain
+from langchain_community.document_loaders import UnstructuredURLLoader
+from langchain_classic.text_splitter import RecursiveCharacterTextSplitter
+from langchain_chroma import Chroma
+from langchain_groq import ChatGroq
+from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+
+load_dotenv()
+
+# Constants
+CHUNK_SIZE = 500
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+VECTORSTORE_DIR = Path(__file__).parent / "resources/vectorstore"
+COLLECTION_NAME = "News-Reporter"
+
+llm = None
+vector_store = None
+
+
+def initialize_components():
+    global llm, vector_store
+
+    if llm is None:
+        llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.9, max_tokens=500)
+
+    if vector_store is None:
+        ef = HuggingFaceEmbeddings(
+            model_name=EMBEDDING_MODEL,
+            model_kwargs={"trust_remote_code": True}
+        )
+
+        vector_store = Chroma(
+            collection_name=COLLECTION_NAME,
+            embedding_function=ef,
+            persist_directory=str(VECTORSTORE_DIR)
+        )
+
+
+def process_urls(urls):
+    """
+    This function scraps data from a url and stores it in a vector db
+    :param urls: input urls
+    :return:
+    """
+    yield "Initializing Components"
+    initialize_components()
+
+    yield "Resetting vector store...✅"
+    vector_store.reset_collection()
+
+    yield "Loading data...✅"
+    loader = UnstructuredURLLoader(urls=urls)
+    data = loader.load()
+
+    yield "Splitting text into chunks...✅"
+    # Create a text splitter
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=500,  # Maximum chunk size
+        chunk_overlap=50,  # Overlap between chunks
+        length_function=len,
+    )
+    text_splitter1 = RecursiveCharacterTextSplitter(
+        separators=["\n\n", "\n", ".", " "],
+        chunk_size=CHUNK_SIZE
+    )
+    docs = text_splitter.split_documents(data)
+
+    yield "Add chunks to vector database...✅"
+    uuids = [str(uuid4()) for _ in range(len(docs))]
+    vector_store.add_documents(docs, ids=uuids)
+
+    yield "Done adding docs to vector database...✅"
+
+def generate_answer(query):
+    if not vector_store:
+        raise RuntimeError("Vector database is not initialized ")
+
+    chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vector_store.as_retriever())
+    result = chain.invoke({"question": query}, return_only_outputs=True)
+    sources = result.get("sources", "")
+
+    return result['answer'], sources
+
+
+if __name__ == "__main__":
+    urls = [
+        "https://news.google.com/",
+        "https://timesofindia.indiatimes.com/us"
+    ]
+
+    process_urls(urls)
+    answer, sources = generate_answer("Please tell me the top two headlines in today’s news.")
+    print(f"Answer: {answer}")
+    print(f"Sources: {sources}")
