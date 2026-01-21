@@ -1,0 +1,128 @@
+{
+  "notes": [
+    {
+      "ts": 1762470075.992542,
+      "note": "planner created"
+    },
+    {
+      "ts": 1762470077.458019,
+      "note": "gathered evidence"
+    },
+    {
+      "ts": 1768964227.464061,
+      "note": "planner created"
+    },
+    {
+      "ts": 1768964230.150781,
+      "note": "gathered evidence"
+    },
+    {
+      "ts": 1769030613.880832,
+      "note": "planner created"
+    },
+    {
+      "ts": 1769030616.412648,
+      "note": "gathered evidence"
+    },
+    {
+      "ts": 1769030616.500845,
+      "note": "planner created"
+    },
+    {
+      "ts": 1769030616.962463,
+      "note": "gathered evidence"
+    },
+    {
+      "ts": 1769037542.287134,
+      "note": "planner created"
+    },
+    {
+      "ts": 1769037544.941303,
+      "note": "gathered evidence"
+    }
+  ],
+  "drafts": [
+    {
+      "ts": 1762470077.4599879,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n"
+    },
+    {
+      "ts": 1762470077.461791,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n\n\n[Revised: tightened bullets; added metric 20% YoY growth (example)]"
+    },
+    {
+      "ts": 1768964230.152103,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n"
+    },
+    {
+      "ts": 1768964230.152874,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n\n\n[Revised: tightened bullets; added metric 20% YoY growth (example)]"
+    },
+    {
+      "ts": 1769030616.4135292,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n"
+    },
+    {
+      "ts": 1769030616.4139829,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n\n\n[Revised: tightened bullets; added metric 20% YoY growth (example)]"
+    },
+    {
+      "ts": 1769030616.964145,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n"
+    },
+    {
+      "ts": 1769030616.966672,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n\n\n[Revised: tightened bullets; added metric 20% YoY growth (example)]"
+    },
+    {
+      "ts": 1769037544.9424121,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n"
+    },
+    {
+      "ts": 1769037544.944888,
+      "draft": "Market Brief (mock)\n- ICP: SMBs and mid-market\n- Value Prop: Faster time-to-value\n- Strengths: focused product, low TCO\n- Risks: competition, pricing pressure\n- Sources: [rag:0], [web:0]\n\n\n[Revised: tightened bullets; added metric 20% YoY growth (example)]"
+    }
+  ],
+  "citations": [
+    "rag:0",
+    "rag:1",
+    "rag:2",
+    "web:0",
+    "web:1",
+    "web:2",
+    "web:3",
+    "web:4",
+    "rag:0",
+    "rag:1",
+    "rag:2",
+    "web:0",
+    "web:1",
+    "web:2",
+    "web:3",
+    "web:4",
+    "rag:0",
+    "rag:1",
+    "rag:2",
+    "web:0",
+    "web:1",
+    "web:2",
+    "web:3",
+    "web:4",
+    "rag:0",
+    "rag:1",
+    "rag:2",
+    "web:0",
+    "web:1",
+    "web:2",
+    "web:3",
+    "web:4",
+    "rag:0",
+    "rag:1",
+    "rag:2",
+    "web:0",
+    "web:1",
+    "web:2",
+    "web:3",
+    "web:4"
+  ]
+}
