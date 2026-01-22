@@ -11,6 +11,7 @@ class EmployeeManager:
         """
         Generate the next employee ID based on the existing IDs.
         """
+
         if not self.employees:
             return "E001"
         max_id = max(int(eid[1:]) for eid in self.employees.keys())
