@@ -2,7 +2,9 @@ from typing import List, Dict, Optional
 from datetime import datetime
 from schemas import TicketCreate, TicketStatusUpdate
 
-
+"""
+This module manages employee tickets.
+"""
 class TicketManager:
     def __init__(self):
         self.tickets: List[Dict[str, str]] = []

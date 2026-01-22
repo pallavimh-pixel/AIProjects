@@ -33,7 +33,9 @@ emailer = EmailSender(
     password=os.getenv("CB_EMAIL_PWD"),
     use_tls=True
 )
-
+"""
+Initialize the MCP server and register the tools and prompts.
+"""
 mcp = FastMCP("HRAssistant")
 
 @mcp.tool()

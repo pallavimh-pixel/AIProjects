@@ -2,7 +2,9 @@ from typing import List, Dict
 from collections import defaultdict
 from datetime import datetime
 from schemas import MeetingCreate, MeetingCancelRequest
-
+'''
+This module manages employee meetings.
+'''
 class MeetingManager:
     def __init__(self):
         self.meetings: Dict[str, List[Dict[str, str]]] = defaultdict(list)

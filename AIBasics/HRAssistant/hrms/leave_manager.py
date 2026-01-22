@@ -1,7 +1,9 @@
 from collections import defaultdict
 from typing import Dict
 from schemas import LeaveApplyRequest
-
+'''
+This module manages employee leave balances.
+'''
 
 class LeaveManager:
     def __init__(self):

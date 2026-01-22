@@ -7,7 +7,9 @@ from meeting_manager import MeetingManager
 from leave_manager import LeaveManager
 from ticket_manager import TicketManager
 from schemas import *
-
+"""
+This module contains utility functions for seeding the services with dummy data.
+"""
 def seed_services(employee_manager, leave_manager, meeting_manager, ticket_manager):
     """
     Seeds all service classes with coherent dummy data.

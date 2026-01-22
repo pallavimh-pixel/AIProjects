@@ -1,6 +1,10 @@
 from typing import List, Dict, Optional
 from difflib import get_close_matches
 from schemas import EmployeeCreate
+"""
+This is the main business logic of the HRAssistant System.
+It manages employees, their managers, and their leave balances.
+"""
 
 class EmployeeManager:
     def __init__(self):

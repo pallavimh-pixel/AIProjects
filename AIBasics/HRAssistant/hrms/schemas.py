@@ -2,7 +2,9 @@ from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional, List, Literal
 from datetime import date, datetime
 
-
+'''
+This module defines models for the various data types used in the HRAssistant system.
+'''
 # Employee schemas
 class EmployeeBase(BaseModel):
     emp_id: str = Field(..., description="Unique employee identifier")
