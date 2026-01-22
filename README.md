@@ -1,12 +1,12 @@
 # This repository includes 2 GenAI Projects
 
-# 🤖 HRAssistant : AI-Powered HR Employee Onboarding Agent
+## 🤖 HRAssistant : AI-Powered HR Employee Onboarding Agent
   ## 🚀 Features
   - **Candidate Profiling**: Automatically extract and summarize details from resumes/CSV records.
   - **Semantic Search**: Use vector storage (ChromaDB) to find the right employees or candidates based on skills, not just keywords.
   - **Traceable Memory**: Built-in JSON memory to track agent reasoning and sources for every answer.
   - **Context-Aware Insights**: Answers complex HR queries by combining internal documentation with pre-trained LLM knowledge.
-# 🏙️  News Reporter  : AI-Powered Top News reporting tool
+## 🏙️  News Reporter  : AI-Powered Top News reporting tool
   ## 🚀 Features
   - Load URLs to fetch article content.
   - Process article content through LangChain's UnstructuredURL Loader
