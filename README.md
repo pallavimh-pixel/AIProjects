@@ -1,4 +1,4 @@
-# This repository includes 2 GenAI Projects
+# GenAI Projects
 
 ## 🤖 HRAssistant : AI-Powered HR Employee Onboarding Agent
   ## 🚀 Features
